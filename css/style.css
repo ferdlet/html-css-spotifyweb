@@ -1,3 +1,4 @@
+/* ***** commons ***** */
 * {
     margin: 0;
     padding: 0;
@@ -10,23 +11,76 @@
     clear: both;
 }
 
+/* layout xs */
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
 header {
     position: fixed;
-    left: 0;
-    top: 0;
     display: flex;
     flex-direction: column;
     background-color: black;
-    width: 12%;
-    height: 100vh;
+    width: 50px;
+    height: calc(100vh - 80px);
+    z-index: 100;
+    align-items: center;
+    padding: 3px;
+}
+
+header .logo-large {
+    display: none;
+    filter: grayscale(80%);
+}
+
+header .logo-small {
+    width: 75%;
+    margin-bottom: 10px;
+    filter: invert(0.2);
+}
+
+.icon-header {
+    width: 55%;
+    margin: 5px auto;
+    filter: invert(0.2);
+}
+
+main {
+    width: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
 }
 
 .header-main {
-    width: 88%;
-    height: 50px;
+    width: calc(100% - 50px);
+    height: 80px;
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(24, 24, 24);
+
+}
+
+.header-main button {
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 2em;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.body-main {
+    margin-top: 80px;
+    overflow-y: scroll;
+    height: calc(100vh - 160px);
 }
 
 footer {
@@ -34,15 +88,14 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 300;
 }
 
 
 /* **** debug **** */
-
-.debug .header-main {
+/* .debug .header-main {
     background-color: gray;
-}
+} */
 
 .debug .body-main {
     background-color: blue;
