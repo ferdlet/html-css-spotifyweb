@@ -36,17 +36,15 @@ nav {
     width: 50px;
     padding: 8px 0;
     justify-content: space-between;
-    min-height: 480px;
+    min-height: 200px;
 }
-
-
 
 .nav-top, .nav-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-        
+
 .invisibile {
     display: none;
 }
@@ -114,7 +112,7 @@ main {
     justify-content: right;
     align-items: center;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 10, 0.9);
     position: fixed;
     top: 0;
     right: 0;
@@ -122,17 +120,22 @@ main {
 }
 
 .header-main button {
-    color: white;
     text-transform: uppercase;
     border: 1px solid white;
     border-radius: 2em;
-    padding: 10px 20px;
+    padding: 10px 25px;
     background-color: transparent;
+    font-weight: 700;
+}
+
+.header-main button a {
+    color: white;
 }
 
 .body-main {
+    height: 100%;
     margin-top: 80px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 footer {
@@ -142,8 +145,117 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
 }
 
+.section-footer.left {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.section-footer.left img {
+    width: 40px;
+}
+
+.section-footer.left .song-description {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.section-footer.left .song-description .author {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.section-footer.left .song-description .song-name {
+    color: gray;
+    font-size: 10px;
+}
+
+.icon-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5px;
+    color: gray;
+    height: 50%;
+}
+
+.section-footer.central {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+.central-top {
+    color: white;
+    display: flex;
+    font-size: 16px;
+    max-width: 100%;
+    width: 200px;    
+    align-items: center;
+    justify-content: center;
+}
+
+.central-top i {
+    margin-right: 10px;
+}
+
+.central-top i:last-child {
+    margin-right: 0;
+}
+
+.central-top i.play {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.central-top .play {
+    font-size: 28px;
+}
+
+.central-bottom {
+    color: white;
+    font-size: 8px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.central-bottom .barra-scorrimento {
+    background-color: lightgray;
+    border-radius: 2em;
+    height: 3px;
+    width: 60%;
+    margin: 0 10px;
+}
+
+.section-footer.right {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    color: white;
+}
+.section-footer.right i{
+    margin: 5px;
+    font-size: 12px;
+}
+
+.section-footer.right .barra-volume {
+    background-color: lightgray;
+    border-radius: 2em;
+    height: 3px;
+    width: 45%;
+    margin: 0 5px;
+}
 
 /* ***** Media Queries ****** */
 /* Small */
@@ -151,7 +263,15 @@ footer {
     nav {
         width: 230px;
         padding: 15px 25px;
-        min-height: 480px;
+        min-height: 380px;
+    }
+
+    .nav-top {
+        height: calc(100% - 80px);
+    }
+
+    .nav-bottom{
+        height: 80px;
     }
 
     .invisibile {
@@ -190,6 +310,7 @@ footer {
 
     .download-icon>span {
         margin-left: 10px;
+        font-size: 12px;
     }
 
     .profile-icon {
@@ -206,6 +327,7 @@ footer {
     .profile-icon>span>a {
         font-weight: 700;
         color: white;
+        font-size: 16px;
     }
 
     .icon {
@@ -217,7 +339,11 @@ footer {
     .icon>.invisibile{
         margin-left: 8px;
         color: gray;
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .playlist {
+        overflow: hidden;
     }
 
     .playlist h4 {
@@ -237,29 +363,32 @@ footer {
     .new-playlist a:last-child {
         color: gray;
         margin-left: 8px;
+        font-size: 15px;
     }
 
     .new-playlist-btn {
         display: inline-block;
         background-color: gray;
         color: black;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .playlist-list ul li a{
         color: gray;
         margin: 8px 0;
         display: inline-block;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .playlist-list {
-        overflow: auto;
+        overflow-y: auto;
+        height: 70%;
+        scrollbar-color: gray lightgray;
     }
     
     
@@ -286,7 +415,7 @@ footer {
     background-color: blue;
 }
 
-.debug footer {
+/* .debug footer {
     background-color: gray;
-}
+} */
 
