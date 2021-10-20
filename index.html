@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body class="debug">
     
@@ -22,7 +25,6 @@
                     <li>
                         <a href="#">
                             <img class="logo-small" src="img/logo-small.svg" alt="logo-small">
-                            
                         </a>
                     </li>
                     <li>
@@ -30,23 +32,46 @@
                             <img class="logo-large" src="img/logo.svg" alt="logo-large">
                         </a>
                     </li>
-                    <li>
+                    <li class="icon">
                         <a href="#">
                             <img class="icon-nav" src="img/home.svg" alt="home">
                         </a>
-                        <span class="invisibile">Home</span>
+                        <a href="#" class="invisibile">Home</a>
                     </li>
-                    <li>
+                    <li class="icon">
                         <a href="#">
                             <img class="icon-nav" src="img/search.svg" alt="search">
                         </a>
-                        <span class="invisibile">Cerca</span>
+                        <a href="#" class="invisibile">Cerca</a>
                     </li>
-                    <li>
-                        <a href="#"><img class="icon-nav" src="img/libreria.svg" alt="libreria"></a>
-                        <span class="invisibile">La tua libreria</span>
+                    <li class="icon">
+                        <a href="#">
+                            <img class="icon-nav" src="img/libreria.svg" alt="libreria">
+                        </a>
+                        <a href="#" class="invisibile">La tua libreria</a>
                     </li>
                 </ul>
+                <div class="playlist invisibile">
+                    <h4>playlist</h4>
+                    <div class="new-playlist">
+                        <a href="#" class="new-playlist-btn">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                        <a href="#">Crea Playlist</a>
+                    </div>
+
+                    <div class="playlist-list">
+                        <ul> 
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
             <div class="nav-bottom">
@@ -54,11 +79,14 @@
                    <a href="#">
                        <i class="fas fa-long-arrow-alt-down"></i>
                     </a>
+                    <span class="invisibile"><a href="#">Installa app</a><span>
                 </div>
                 <div class="profile-icon">
                     <a href="#">
                         <img src="img/profile.svg" alt="profilo">
                     </a>
+                    <span class="invisibile"><a href="#">John Doe</a></span>
+
                 </div>
             </div>
         </nav>
