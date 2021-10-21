@@ -66,6 +66,10 @@ nav {
     width: 25px;
 }
 
+.icon:hover .icon-nav {
+    filter: none;
+}
+
 .download-icon>a {
     display: inline-block;
     border: 1px solid gray;
@@ -77,6 +81,10 @@ nav {
     text-align: center;
     line-height: 10px;
     margin-bottom: 15px;
+}
+
+.download-icon:hover>a, .download-icon:hover a {
+    color: white;
 }
 
 .download-icon a {
@@ -128,6 +136,10 @@ main {
     font-weight: 700;
 }
 
+.header-main button:hover a {
+    font-size: 14px;
+}
+
 .header-main button a {
     color: white;
 }
@@ -150,6 +162,8 @@ main {
 .body-main .nav ul li {
     margin-bottom: 20px;
     margin-left: 20px;
+    text-align: center;
+    line-height: 14px;
 }
 
 .body-main .nav ul li a {
@@ -157,6 +171,18 @@ main {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
+}
+
+.body-main .nav ul li a:hover {
+    color: white;
+}
+
+.border-bottom {
+    width: 40%;
+    height: 2px;
+    margin-top: 0;
+    background-color: greenyellow;
+    display: inline-block;
 }
 
 .section1 {
@@ -195,8 +221,38 @@ main {
     font-weight: 700;
 }
 
+.container-img {
+    width: 100%;
+    position: relative;
+}
+
+.container-img .box-play {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container-img .box-play i {
+    color: white;
+}
+
+
+.container-img:hover .box-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
 .box img {
     width: 100%;
+    display: block;
 }
 
 section>p {
@@ -249,6 +305,11 @@ footer {
     font-size: 10px;
 }
 
+.section-footer.left .song-description .song-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .icon-footer {
     display: flex;
     flex-direction: column;
@@ -256,6 +317,10 @@ footer {
     margin-left: 5px;
     color: gray;
     height: 50%;
+}
+
+.icon-footer i:hover {
+    color: white;
 }
 
 .section-footer.central {
@@ -275,10 +340,17 @@ footer {
     width: 200px;    
     align-items: center;
     justify-content: center;
+    height: 30px;
 }
+
+.central-top i:hover {
+    font-size: 18px;
+}
+
 
 .central-top i {
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .central-top i:last-child {
@@ -292,6 +364,10 @@ footer {
 
 .central-top .play {
     font-size: 28px;
+}
+
+.central-top .play:hover {
+    font-size: 30px;
 }
 
 .central-bottom {
@@ -318,6 +394,17 @@ footer {
     border-radius: 2em;
 }
 
+.central-bottom .barra-scorrimento:hover .avanzamento {
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.central-bottom .barra-scorrimento:hover .cerchio-avanzamento {
+    display: block;
+}
+
 .section-footer.right {
     display: flex;
     width: 30%;
@@ -340,7 +427,24 @@ footer {
     margin: 0 10px;
 }
 
+.section-footer.right .barra-volume:hover .avanzamento {
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+.cerchio-avanzamento {
+    display: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 2em;
+    background-color: white;
+}
+
+.section-footer.right .barra-volume:hover .cerchio-avanzamento {
+    display: block;
+}
 
 
 /* ***** Media Queries ****** */
@@ -348,7 +452,7 @@ footer {
 @media screen and (min-width: 576px) {
     nav {
         width: 230px;
-        padding: 15px 25px;
+        padding: 15px 0;
         min-height: 380px;
     }
 
@@ -358,6 +462,7 @@ footer {
 
     .nav-bottom{
         height: 80px;
+        margin-left: 25px;
     }
 
     .invisibile {
@@ -371,6 +476,7 @@ footer {
     .logo-large {
         display: inline-block;
         margin-bottom: 25px;
+        margin-left: 25px;
     }
 
     .logo-small {
@@ -379,6 +485,17 @@ footer {
 
     .icon-nav {
         margin-bottom: 0;
+    }
+
+    .icon .barra-laterale {
+        height: 28px;
+        width: 3px;
+        background-color: greenyellow;
+        margin-right: 21px;
+    }
+
+    .nav-top ul .mg {
+        margin-left: 25px;
     }
 
     .download-icon {
@@ -428,8 +545,13 @@ footer {
         font-size: 12px;
     }
 
+    .icon:hover>.invisibile {
+        color: white;
+    }
+
     .playlist {
         overflow: hidden;
+        margin-left: 25px;
     }
 
     .playlist h4 {
@@ -464,11 +586,23 @@ footer {
         font-size: 20px;
     }
 
+    .new-playlist:hover .new-playlist-btn {
+        background-color: white;
+    }
+
+    .new-playlist:hover a:last-child {
+        color: white;
+    }
+
     .playlist-list ul li a{
         color: gray;
         margin: 8px 0;
         display: inline-block;
         font-size: 12px;
+    }
+
+    .playlist-list ul li:hover a{
+        color: white;
     }
 
     .playlist-list {
