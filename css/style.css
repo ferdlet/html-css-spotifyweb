@@ -608,7 +608,6 @@ footer {
     .playlist-list {
         overflow-y: auto;
         height: 70%;
-        scrollbar-color: gray lightgray;
     }
     
     
