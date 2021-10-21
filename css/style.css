@@ -264,6 +264,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     width: 40%;
+    max-width: 620px;
 }
 
 .central-top {
@@ -305,9 +306,16 @@ footer {
 .central-bottom .barra-scorrimento {
     background-color: lightgray;
     border-radius: 2em;
-    height: 3px;
+    height: 5px;
     width: 60%;
     margin: 0 10px;
+}
+
+.avanzamento {
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    border-radius: 2em;
 }
 
 .section-footer.right {
@@ -316,8 +324,7 @@ footer {
     justify-content: flex-end;
     align-items: center;
     color: white;
-    min-width: 150px;
-    max-width: 290px;
+    max-width: 230px;
 }
 .section-footer.right i{
     margin: 5px;
@@ -327,7 +334,7 @@ footer {
 .section-footer.right .barra-volume {
     background-color: lightgray;
     border-radius: 2em;
-    height: 3px;
+    height: 5px;
     width: 45%;
     min-width: 65px;
     margin: 0 10px;
@@ -354,7 +361,7 @@ footer {
     }
 
     .invisibile {
-        display: inline-block;
+        display: block;
     }
 
     .nav-top, .nav-bottom {
@@ -482,6 +489,18 @@ footer {
 }
 
 
+
+@media screen and (min-width: 768px) {
+    .icon-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        color: gray;
+        height: 50%;
+        align-items: center;
+        width: 80px;
+    }
+}
 
 
 
